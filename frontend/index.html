@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Task Tracker</title>
+    <link rel="stylesheet" href="../frontend/css/style.css">
+</head>
+
+<body>
+    <h1>Student Task Tracker</h1>
+
+    <input type="text" id="title" placeholder="Task title">
+
+    <input type="text" id="subject" placeholder="Subject">
+
+    <button onclick="addTask()">Add Task</button>
+
+    <script>
+        async function addTask() {
+            const title = document.getElementById("title").value;
+            const subject = document.getElementById("subject").value;
+
+            const response = await fetch("http://localhost:5000/api/tasks", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    title: title,
+                    subject: subject
+                })
+            });
+
+            const data = await response.json();
+
+            console.log(data);
+        }
+    </script>
+</body>
+
+</html>
