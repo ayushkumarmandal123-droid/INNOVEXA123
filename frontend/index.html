@@ -5,18 +5,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Task Tracker</title>
+    <title>Anonymous Message | INNOVEXA</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <h1>Student Task Tracker</h1>
 
-<input type="text" id="title" placeholder="Task title">
 
-<input type="text" id="subject" placeholder="Subject">
+<main class="message-container">
 
-<button onclick="addTask()">Add Task</button>
+    <div class="message-card">
+
+        <div class="message-header">
+            <h1>Anonymous Message</h1>
+            <p>Send a message through INNOVEXA</p>
+        </div>
+
+        <div class="message-form">
+
+            <div class="form-group">
+                <label for="title">Your Name</label>
+                <input
+                    type="text"
+                    id="title"
+                    placeholder="Enter your name"
+                    autocomplete="name"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Your Message</label>
+                <textarea
+                    id="subject"
+                    placeholder="Write your message..."
+                    rows="5"
+                ></textarea>
+            </div>
+
+            <button type="button" onclick="addTask()">
+                Send Message
+            </button>
+
+        </div>
+
+    </div>
+
+</main>
 
 <script>
     async function addTask() {
@@ -41,6 +75,7 @@
         console.log(data);
     }
 </script>
+
 
 </body>
 
