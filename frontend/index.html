@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -11,33 +12,36 @@
 <body>
     <h1>Student Task Tracker</h1>
 
-    <input type="text" id="title" placeholder="Task title">
+<input type="text" id="title" placeholder="Task title">
 
-    <input type="text" id="subject" placeholder="Subject">
+<input type="text" id="subject" placeholder="Subject">
 
-    <button onclick="addTask()">Add Task</button>
+<button onclick="addTask()">Add Task</button>
 
-    <script>
-        async function addTask() {
-            const title = document.getElementById("title").value;
-            const subject = document.getElementById("subject").value;
+<script>
+    async function addTask() {
+        const title = document.getElementById("title").value;
+        const subject = document.getElementById("subject").value;
 
-            const response = await fetch("http://localhost:5000/api/tasks", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    title: title,
-                    subject: subject
-                })
-            });
+        alert("Hello! Welcome to INNOVEXA.");
 
-            const data = await response.json();
+        const response = await fetch("http://localhost:5000/api/tasks", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                title: title,
+                subject: subject
+            })
+        });
 
-            console.log(data);
-        }
-    </script>
+        const data = await response.json();
+
+        console.log(data);
+    }
+</script>
+
 </body>
 
 </html>
