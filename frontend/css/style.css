@@ -1,71 +1,92 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
 
 body {
-    font-family: Arial, sans-serif;
-    background: #050617;
-    color: white;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+background: #050617;
+font-family: Arial, sans-serif;
+color: white;
 }
 
-.container {
-    width: 90%;
-    max-width: 600px;
-    background: #030822;
-    padding: 35px;
-    border: 1px solid #12345c;
-    border-radius: 15px;
-    box-shadow: 0 0 25px rgba(0, 217, 255, 0.15);
+main {
+width: 90%;
+max-width: 450px;
+padding: 35px;
+background: #030822;
+border: 1px solid #00e5ff;
+border-radius: 15px;
+box-shadow: 0 0 25px rgba(0, 229, 255, 0.25);
+text-align: center;
 }
 
 h1 {
-    text-align: center;
-    color: #00d9ff;
-    margin-bottom: 30px;
+margin-bottom: 30px;
+font-size: 28px;
+color: #00e5ff;
 }
 
-.input-group {
-    margin-bottom: 18px;
-}
-
-label {
-    display: block;
-    margin-bottom: 8px;
-    color: #b8c7d9;
+main div {
+margin-bottom: 18px;
 }
 
 input {
-    width: 100%;
-    padding: 13px;
-    background: #0a1028;
-    color: white;
-    border: 1px solid #23466d;
-    border-radius: 8px;
-    outline: none;
+width: 100%;
+padding: 14px 16px;
+border: 1px solid #26345c;
+border-radius: 8px;
+outline: none;
+background: #080f2d;
+color: white;
+font-size: 15px;
+transition: 0.3s;
+}
+
+input::placeholder {
+color: #8b94b5;
 }
 
 input:focus {
-    border-color: #00d9ff;
-    box-shadow: 0 0 8px rgba(0, 217, 255, 0.2);
+border-color: #00e5ff;
+box-shadow: 0 0 10px rgba(0, 229, 255, 0.2);
 }
 
 button {
-    width: 100%;
-    padding: 13px;
-    background: #00d9ff;
-    color: #001018;
-    border: none;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
+width: 100%;
+padding: 14px;
+border: none;
+border-radius: 8px;
+background: #00e5ff;
+color: #030822;
+font-size: 16px;
+font-weight: bold;
+cursor: pointer;
+transition: 0.3s;
 }
 
 button:hover {
-    background: #00b8d9;
+background: #00bcd4;
+box-shadow: 0 0 15px rgba(0, 229, 255, 0.4);
+transform: translateY(-2px);
+}
+
+button:active {
+transform: translateY(0);
+}
+
+@media (max-width: 500px) {
+main {
+padding: 25px;
+}
+
+
+h1 {
+    font-size: 24px;
+}
+
 }
